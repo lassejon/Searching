@@ -1,8 +1,8 @@
 namespace Project;
 
-public static class MockDbContext
+public class MockDbContext
 {
-    public static Product[] MockTShirtProducts { get; } =
+    public Product[] MockTShirtProducts { get; } =
     {
         new()
         { 

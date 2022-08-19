@@ -19,7 +19,10 @@ public class Product
 
     public override string ToString()
     {
-        return $"{Name} - {Id}";
+        var sizesAvailable = string.Join("- ", SizesAvailable.Select(kv => $"{kv.Key}: {kv.Value}"));
+        return @$"T-SHIT name: {Name} 
+ID: {Id}
+Sizes available: {sizesAvailable}";
     }
 }
 

@@ -27,6 +27,6 @@ public class Searching
     {
         var regex = new Regex($@"{search}", RegexOptions.IgnoreCase);
 
-        return _dbContext.MockTShirtProducts.Where(p => regex.Match(p.Name).Success);
+        return _dbContext.MockTShirtProducts.Where(p => !p.IsDeleted && regex.Match(p.Name).Success);
     }
 }
