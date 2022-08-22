@@ -4,14 +4,14 @@ using Project;
 
 static void Search()
 {
-    var search = new Searching(new MockDbContext());
+    Searching search = new Searching(new MockDbContext());
 
     Console.WriteLine("Search for products");
     Console.Write("Input: ");
-    var searchFor = Console.ReadLine();
+    string searchFor = Console.ReadLine();
     Console.WriteLine();
 
-    var results = search.GetStudents(searchFor);
+    IEnumerable<Product> results = search.GetStudents(searchFor);
 
     foreach (var product in results)
     {
